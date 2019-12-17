@@ -43,8 +43,11 @@ similar_to_listing = list(enumerate(cosine_similarity[listing_id]))
 similarity_sorted_similar_to_listing = sorted(similar_to_listing, key=lambda x:x[1], reverse=True)
 
 # most similar to listing
+print("\n\n\n") 
 print(" SIMILAR TO LISTING") 
-i = 0
+print("\n\n\n") 
+
+i = 1
 for listing in similarity_sorted_similar_to_listing:
     price = get_price_from_id(listing[0])
     print(get_name_from_id(listing[0]))
@@ -62,10 +65,10 @@ price_sorted_similar_to_listing = price_sorted_similar_to_listing[:200]
 price_sorted_similar_to_listing = sorted(price_sorted_similar_to_listing, key=lambda x:get_price_from_id(x[0]), reverse=False)
 
 print("\n\n\n") 
-
 print(" 200 MOST SIMILAR TO LISTING, SORTED BY PRICE") 
+print("\n\n\n") 
 
-i = 0
+i = 1
 for listing in price_sorted_similar_to_listing:
     price = get_price_from_id(listing[0])
     print(get_name_from_id(listing[0]))
